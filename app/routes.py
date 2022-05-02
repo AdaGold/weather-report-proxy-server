@@ -22,7 +22,6 @@ def get_lat_lon():
         params={"q": loc_query, "key": location_key, "format": "json"}
     )
 
-    print(response.json())
     return jsonify(response.json())
 
 
