@@ -33,7 +33,7 @@ def get_weather():
         return {"message": "must provide lat and lon parameters"}
 
     response = requests.get(
-        "https://api.openweathermap.org/data/2.5/onecall",
+        "https://api.openweathermap.org/data/2.5/weather",
         params={"lat": lat_query, "lon": lon_query, "appid": weather_key}
     )
     return response.json()
