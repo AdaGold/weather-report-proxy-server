@@ -6,12 +6,12 @@ import requests
 
 load_dotenv()
 
-proxy_bp = Blueprint("proxy_bp", __name__)
+bp = Blueprint("proxy_bp", __name__)
 
 location_key = os.environ.get("LOCATION_KEY")
 weather_key = os.environ.get("WEATHER_KEY")
 
-@proxy_bp.get("/location")
+@bp.get("/location")
 def get_lat_lon():
     loc_query = request.args.get("q")
     if not loc_query:
@@ -24,7 +24,7 @@ def get_lat_lon():
 
     return response.json(), 200
 
-@proxy_bp.get("/weather")
+@bp.get("/weather")
 def get_weather():
     lat_query = request.args.get("lat")
     lon_query = request.args.get("lon")
