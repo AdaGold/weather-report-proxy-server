@@ -8,11 +8,16 @@ The Weather Report proxy server is to be used with the [Weather Report web app p
     - `git clone https://github.com/AdaGold/weather-report-proxy-server.git`
 
 1. Create and activate a virtual environment
-    - `python3 -m venv venv`
-    - `source venv/bin/activate`
-1. Install the `requirements.txt`
-    - `pip install -r requirements.txt`
-1. Create a `.env` file with your API keys
+     ```bash 
+       $ python3 -m venv venv
+       $ source venv/bin/activate
+     ```
+
+2. Install the `requirements.txt`
+    ```bash
+     (venv) $ pip install -r requirements.txt
+    ```
+3. Create a `.env` file with your API keys
     ```bash
     # .env
 
@@ -23,8 +28,10 @@ The Weather Report proxy server is to be used with the [Weather Report web app p
     WEATHER_KEY="replace_with_your_api_key"
     ```
 
-1. Run the server
-    - `flask run`
+4. Run the server
+    ```bash
+     (venv) $ flask run --debug
+    ```
 
 ## Endpoints
 
