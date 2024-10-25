@@ -28,8 +28,7 @@ def get_lat_lon():
 def get_weather():
     lat_query = request.args.get("lat")
     lon_query = request.args.get("lon")
-    print(lat_query, lon_query)
-    print(weather_key)
+
     if not lat_query or not lon_query:
         return {"message": "must provide lat and lon parameters"}, 400
 
